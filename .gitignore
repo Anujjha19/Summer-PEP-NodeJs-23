@@ -3,6 +3,9 @@
 *.dll
 *.so
 
+
+.env
+
 # Ignore log files
 *.log
 
