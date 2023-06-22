@@ -1,6 +1,3 @@
-## File Descriptions
-
-<<<<<<< HEAD
 ### index.js:
 
 This file serves as the main entry point for your server application. It imports the `app` module and the `connectToDB` function from separate files and starts the server to listen for incoming requests on a specified port.
@@ -72,11 +69,3 @@ During the development process, you may face challenges such as handling errors,
 
 Note:
 This is a basic implementation of a RESTful API using Node.js, MongoDB, and Express. You can enhance and customize it based on your specific requirements and learning objectives.
->>>>>>> 1eaed85acb3f60aa6b517428281fa4407a3026e4
-
-This file establishes a connection to the MongoDB database using the `mongoose` library. It reads the connection details from a `.env` file and exports a function `connectToDB` that can be called to connect to the database.
-
-### README.md:
-
-This document provides an overview of the files in the project and their respective purposes.
-
