@@ -22,43 +22,40 @@ node server.js
 
 ## API Endpoints
 
-- GET /students
+# GET /students
 - Fetch all the students from the database.
 - Returns a JSON response with an array of all the students.
 
-- GET /students/:id
+# GET /students/:id
 - Fetch a specific student by their ID from the database.
 - Returns a JSON response with the student's details.
 
-- POST /students
+# POST /students
 - Create a new student in the database.
 - Accepts JSON data in the request body with the student's details.
-- Validates the data and inserts the student into the "students" collection.
-- Returns a JSON response with the newly created student's details.
 
-- PUT /students/:id
+# PUT /students/:id
 - Update an existing student in the database.
 - Accepts JSON data in the request body with the updated student's details.
 - Finds the student by their ID and updates their information in the "students" collection.
-- Returns a JSON response with the updated student's details.
 
-- DELETE /students/:id
+# DELETE /students/:id
 - Delete a specific student by their ID from the database.
 - Removes the student from the "students" collection.
-- Returns a JSON response indicating the success or failure of the deletion.
 
 Challenges and Solutions:
 
 During the development process, you may face challenges such as handling errors, validating data, or managing the database connection. Here are some common challenges and their solutions:
-    Challenge: Error handling - It's important to handle errors properly and provide    
+   - Challenge: Error handling - It's important to handle errors properly and provide    
                meaningful error messages to the API consumers.
     Solution: Use try-catch blocks to catch any errors that occur during the execution of 
-              your code. You can then send an appropriate error response using the res.status() and res.json() methods.
-    Challenge: Data validation - Ensuring that the data sent to your API is valid and meets 
+              your code. 
+   - Challenge: Data validation - Ensuring that the data sent to your API is valid and meets 
                the required criteria.
     Solution: Use conditional statements to check for missing or invalid fields in the 
-              request body. If any required fields are missing or invalid, send an appropriate error response.
-    Challenge: Proper Database Connection
+              request body. If any required fields are missing or invalid, send an appropriate 
+              error response.
+   - Challenge: Proper Database Connection
     Solution: Create a separate module (db.js in this case) to handle the database      
               connection. Use Proper Message to see whether its connected or not.
 
