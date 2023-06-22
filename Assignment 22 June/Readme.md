@@ -1,17 +1,13 @@
 # RESTful API using Node.js, MongoDB, and Express
 
+I was not able to do it completely by own taken help with GPT, but still has some errors fixing it 
+
+
 This is a basic RESTful API built using Node.js, MongoDB and Express.
 
-## Setup
-
-1. Install Node.js and MongoDB on your machine.
-
-2. Clone this repository.
-
-3. Install the project dependencies by running the following command in the terminal:
    npm install
 
-4. Configure the database connection:
+   Configure the database connection:
 
 - Open the `db.js` file located in the root directory.
 - Replace `'your-database-name'` with the actual name of your MongoDB database.
