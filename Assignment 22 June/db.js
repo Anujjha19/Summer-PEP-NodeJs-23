@@ -1,31 +1,15 @@
-// db.js
+const mongoose = require('mongoose');
+require('dotenv').config();
 
-const { MongoClient } = require('mongodb');
+// MongoDB connection URL from .env file
+const url = process.env.DB_URL;
 
-const url = 'mongodb://127.0.0.1:27017'; // MongoDB connection URL
-const dbName = 'restful-api'; // Your database name
+// Database Name
+const dbName = 'mydatabase';
 
-let db = null;
-
-async function connect() {
-    try {
-        const client = await MongoClient.connect(url);
-        db = client.db(dbName);
-        console.log('Connected to the database');
-    } catch (error) {
-        console.error('Error connecting to the database', error);
-        process.exit(1); // Exit with failure
-    }
-}
-
-function getDb() {
-    if (!db) {
-        throw new Error('Database not connected');
-    }
-    return db;
-}
-
-module.exports = {
-    connect,
-    getDb,
+// Function to connect to MongoDB
+const connectToDB = () => {
+    return mongoose.connect(`${url}/${dbName}`, { useNewUrlParser: true, useUnifiedTopology: true });
 };
+
+module.exports = connectToDB;
