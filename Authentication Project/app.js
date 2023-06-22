@@ -6,13 +6,10 @@ const jwt = require("jsonwebtoken");
 
 const app = express();
 
-
-//require a darabase connection
 const dbConnect = require('./db/dbConnect');
 const User = require('./db/userModel');
 const auth = require("./auth");
 
-//execute database connection
 dbConnect()
 
 app.use(express.json())
