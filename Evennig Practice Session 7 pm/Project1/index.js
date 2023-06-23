@@ -14,7 +14,7 @@ database.on("error", (err)=>{
 });
 
 database.once('connected' , () => {
-    console.log( "DB Connected")
+    console.log( "DB Connected ")
 })
 
 
