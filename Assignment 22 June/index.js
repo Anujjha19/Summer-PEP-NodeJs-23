@@ -1,17 +1,3 @@
-/* const express = require("express");
-const app = express();
-require("dotenv").config();
-const dbConnect = require("./db/dbConnect");
-dbConnect();
-
-const PORT = process.env.PORT || 5000;
-
-app.use(express.json());
-app.use("/students", require("./routes/routes"));
-
-app.listen(PORT, () => {
-    console.log(`server running on port ${PORT}!....`);
-}); */
 
 const express = require('express');
 const { connect } = require('mongoose');
