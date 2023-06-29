@@ -10,7 +10,15 @@ const dbConnect = require('./db/dbConnect');
 const User = require('./db/userModel');
 const auth = require("./auth");
 
-dbConnect()
+dbConnect();
+
+//CORS ERROR
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content, Content-Type, Authorization");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, DELETE, PATCH, PUT, OPTIONS ");
+    next()
+})
 
 app.use(express.json())
 //adds middleware to your app
